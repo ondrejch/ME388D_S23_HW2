@@ -1,0 +1,754 @@
+ *******************************************************************************
+ *                                                                             *
+ *                                 SCALE 6.2.3                                 *
+ *                                -------------                                *
+ *                                January 2023                                 *
+ *                                                                             *
+ *           SCALE:  A Comprehensive Modeling and Simulation Suite             *
+ *                   for Nuclear Safety Analysis and Design                    *
+ *                                                                             *
+ *                      Reactor and Nuclear Systems Division                   *
+ *                        Oak Ridge National Laboratory                        *
+ *                                                                             *
+ *                           http://scale.ornl.gov                             *
+ *                            scalehelp@ornl.gov                               *
+ *                                                                             *
+ *******************************************************************************
+ *******************************************************************************
+      
+                  Job Information
+                  ---------------
+      Job started on node60 on Mon 23/01/2023 00:38:33
+      Working directory: /tmp/scale.ondrejch.366060
+      Input file name  : /home/ondrejch/scale/rt/HW2-3/2_3
+      Output file name : /home/ondrejch/scale/rt/HW2-3/2_3.out
+      SCALE executable : /opt/scale6.2.3/bin/../bin/scale
+      
+ *******************************************************************************
+
+
+    module t-xsec will be called on Mon Jan 23 00:38:35 2023.
+    sequence specification record:=t-xsec
+Input Data:
+
+      SCALE Materials HW2 problem 3
+      v7-252
+      read comp
+          uo2       1                                  0.912      300 92235 4.5 92234 0.034 92238 95.466 end
+          atomGd2O3 1     7.41     2 64000 2 8000 3    0.05       300 end
+          he        2 den=0.0002                       0.999998   300 end
+          dry-air   2 den=0.0014                       0.000002   300 end
+          zirc4     3                                  0.975      300 end
+          h2o       4 den=0.7561                       0.998      550 end
+          atomboh3  4     1.44 3  5000 1 8000 3 1000 3 0.002      550 5010 70 5011 30 end
+          atomb4c   5     2.52 2  5000 4 6000 1        1.0       300 5010 90 5011 10 end
+          atomflibe 6     1.94 3  3000 1 4000 1 9000 3 0.95       300 end
+          atomuf4   6     6.7  2 92000 1 9000 4        0.06       300 92235 19.5 92234 0.146 92238 80.354 end
+      end comp
+end
+
+------------------------------------------------------------------------------------
+ Mixture table for component comps at line:4, column:1
+------------------------------------------------------------------------------------
+Mixture = 1 with density(g/cc) = 10.3660 and temperature(K) = 300.00
+        Entry      Mixture      Nuclide     Density (atoms/b-cm)     Temperature (K)
+------------------------------------------------------------------------------------
+            1            1         8016             4.633677e-02              300.00
+            2            1         8017             1.765086e-05              300.00
+            3            1         8018             9.522174e-05              300.00
+            4            1        64152             2.462001e-06              300.00
+            5            1        64154             2.683582e-05              300.00
+            6            1        64155             1.821881e-04              300.00
+            7            1        64156             2.519858e-04              300.00
+            8            1        64157             1.926516e-04              300.00
+            9            1        64158             3.057806e-04              300.00
+           10            1        64160             2.690967e-04              300.00
+           11            1        92234             7.707963e-06              300.00
+           12            1        92235             1.015818e-03              300.00
+           13            1        92238             2.127804e-02              300.00
+------------------------------------------------------------------------------------
+Mixture = 2 with density(g/cc) = 0.0002 and temperature(K) = 300.00
+        Entry      Mixture      Nuclide     Density (atoms/b-cm)     Temperature (K)
+------------------------------------------------------------------------------------
+           14            2         2003             3.009109e-11              300.00
+           15            2         2004             3.009106e-05              300.00
+           16            2         6012             1.749999e-14              300.00
+           17            2         6013             1.892752e-16              300.00
+           18            2         7014             9.176918e-11              300.00
+           19            2         7015             3.352602e-13              300.00
+           20            2         8016             2.468504e-11              300.00
+           21            2         8017             9.403163e-15              300.00
+           22            2         8018             5.072759e-14              300.00
+------------------------------------------------------------------------------------
+Mixture = 3 with density(g/cc) = 6.3960 and temperature(K) = 300.00
+        Entry      Mixture      Nuclide     Density (atoms/b-cm)     Temperature (K)
+------------------------------------------------------------------------------------
+           23            3        24050             3.218682e-06              300.00
+           24            3        24052             6.206909e-05              300.00
+           25            3        24053             7.038137e-06              300.00
+           26            3        24054             1.751941e-06              300.00
+           27            3        26054             8.465991e-06              300.00
+           28            3        26056             1.328980e-04              300.00
+           29            3        26057             3.069193e-06              300.00
+           30            3        26058             4.084533e-07              300.00
+           31            3        40090             2.133937e-02              300.00
+           32            3        40091             4.653600e-03              300.00
+           33            3        40092             7.113123e-03              300.00
+           34            3        40094             7.208517e-03              300.00
+           35            3        40096             1.161326e-03              300.00
+           36            3        50112             4.563641e-06              300.00
+           37            3        50114             3.105158e-06              300.00
+           38            3        50115             1.599627e-06              300.00
+           39            3        50116             6.840757e-05              300.00
+           40            3        50117             3.613275e-05              300.00
+           41            3        50118             1.139499e-04              300.00
+           42            3        50119             4.041410e-05              300.00
+           43            3        50120             1.532819e-04              300.00
+           44            3        50122             2.178315e-05              300.00
+           45            3        50124             2.724070e-05              300.00
+           46            3        72174             3.452850e-09              300.00
+           47            3        72176             1.135125e-07              300.00
+           48            3        72177             4.013939e-07              300.00
+           49            3        72178             5.887110e-07              300.00
+           50            3        72179             2.939238e-07              300.00
+           51            3        72180             7.570374e-07              300.00
+------------------------------------------------------------------------------------
+Mixture = 4 with density(g/cc) = 0.7575 and temperature(K) = 550.00
+        Entry      Mixture      Nuclide     Density (atoms/b-cm)     Temperature (K)
+------------------------------------------------------------------------------------
+           52            4         1001             5.052769e-02              550.00
+           53            4         1002             5.811351e-06              550.00
+           54            4         5010             2.035323e-05              550.00
+           55            4         5011             7.933378e-06              550.00
+           56            4         8016             2.524768e-02              550.00
+           57            4         8017             9.617488e-06              550.00
+           58            4         8018             5.188381e-05              550.00
+------------------------------------------------------------------------------------
+Mixture = 5 with density(g/cc) = 2.5200 and temperature(K) = 300.00
+        Entry      Mixture      Nuclide     Density (atoms/b-cm)     Temperature (K)
+------------------------------------------------------------------------------------
+           59            5         5010             1.051566e-01              300.00
+           60            5         5011             1.062664e-02              300.00
+           61            5         6012             2.863610e-02              300.00
+           62            5         6013             3.097203e-04              300.00
+------------------------------------------------------------------------------------
+Mixture = 6 with density(g/cc) = 2.2450 and temperature(K) = 300.00
+        Entry      Mixture      Nuclide     Density (atoms/b-cm)     Temperature (K)
+------------------------------------------------------------------------------------
+           63            6         3006             1.154804e-03              300.00
+           64            6         3007             1.406000e-02              300.00
+           65            6         4009             1.521481e-02              300.00
+           66            6         9019             4.873382e-02              300.00
+           67            6        92234             1.144068e-06              300.00
+           68            6        92235             1.521516e-04              300.00
+           69            6        92238             6.190544e-04              300.00
+------------------------------------------------------------------------------------
+        Entry      Mixture      Nuclide     Density (atoms/b-cm)     Temperature (K)
+------------------------------------------------------------------------------------
+ End of mixture table for component comps at line:4, column:1
+------------------------------------------------------------------------------------
+
+XSProc built mixture pool in: 0.02 seconds.
+
+XSProc built celldata pool in: 0.00 seconds.
+
+
+
+
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+*****                                                                                                                          *****
+*****                                             program verification information                                             *****
+*****                                                                                                                          *****
+*****                                           code system: SCALE   version: 6.2.0                                            *****
+*****                                                                                                                          *****
+************************************************************************************************************************************
+************************************************************************************************************************************
+*****                                                                                                                          *****
+*****                                                                                                                          *****
+*****                      program:  t-xsec                                                                                    *****
+*****                                                                                                                          *****
+*****                      version:  6.2.3 (602003)                                                                            *****
+*****                                                                                                                          *****
+*****                     username:  ondrejch                                                                                  *****
+*****                                                                                                                          *****
+*****                     hostname:  node60                                                                                    *****
+*****                                                                                                                          *****
+*****                                                                                                                          *****
+*****            date of execution:  2023-01-23                                                                                *****
+*****                                                                                                                          *****
+*****            time of execution:  00:38:35                                                                                  *****
+*****                                                                                                                          *****
+************************************************************************************************************************************
+************************************************************************************************************************************
+************************************************************************************************************************************
+
+
+
+Loaded MG Library: /opt/scale6.2_data/scale.rev04.xn252v7.1
+***Warning: Nuclide 8018 is missing cross sections. Introducing zero cross sections.
+XSProc loaded ampx library in: 6.12 seconds.
+
+Loaded MultiGroup Library: /opt/scale6.2_data/scale.rev04.xn252v7.1
+
+----------------------------------------------------------------------------------------------------
+ Cross section processing summary of the cells: 
+----------------------------------------------------------------------------------------------------
+
+ Total 6 cells are being processed:
+
+      4 *default cells* (non-fissionable) processed with BONAMI.
+      2 *default cells* (fissionable) processed with CENTRM (sequence default option).
+
+ NOTE: *default cells* are the cells not specified in CELLDATA block (They are processed as
+       infinite homogeneous cells).
+
+----------------------------------------------------------------------------------------------------
+
+XSProc prepared 6 unit cells in 0.01 seconds.
+
+
+     0$ array      4 entries read
+
+     1$ array     10 entries read
+
+     1* array     10 entries read
+
+     1t
+ 
+  MG Library Source: endf Revision: 7 Mod: 1
+  Determined CE Library XML file to be: ce_v7.1_endf.xml
+
+
+   CE-KENO xsdir XML file:   /opt/scale6.2_data/ce_v7.1_endf.xml
+
+
+ **** W A R N I N G :  No data for requested nuclide 8018
+                                          from: endf  v7  
+
+   A new centrm library has been written on unit number:   81
+   The number of input nuclides was:                       17
+   Number of Nuclides on output PW library:                16
+
+
+                  Description of Output CENTRM Library 
+
+ Entry    ZA   Data Src  Vers No.  Mod No.  MT-Optn  Thermal ID    XS temperatures 
+ -----  -----  --------  --------  -------  -------  ----------    --------------- 
+    1     8016    endf       7         1        1             0        300.00
+    2     8017    endf       7         1        1             0        300.00
+    3    64152    endf       7         1        1             0        300.00
+    4    64154    endf       7         1        1             0        300.00
+    5    64155    endf       7         1        1             0        300.00
+    6    64156    endf       7         1        1             0        300.00
+    7    64157    endf       7         1        1             0        300.00
+    8    64158    endf       7         1        1             0        300.00
+    9    64160    endf       7         1        1             0        300.00
+   10    92234    endf       7         1        1             0        300.00
+   11    92235    endf       7         1        1             0        300.00
+   12    92238    endf       7         1        1             0        300.00
+   13     3006    endf       7         1        1             0        300.00
+   14     3007    endf       7         1        1             0        300.00
+   15     4009    endf       7         1        1             0        300.00
+   16     9019    endf       7         1        1             0        300.00
+XSProc starting module Dancoff.
+
+ Dancoff Module Problem Description
+ ige--geometry type(0/1/2/3--inf med/slab/cyl/sphere)                         0
+ izm--number of zones or material regions                                     1
+ igo--celltype                                                                1
+ ibr--right boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+ ibl--left  boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+XSProc execution of module Dancoff completed.
+XSProc starting module Bonami.
+XSProc execution of module Bonami completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+XSProc starting module CentrmPmc.
+
+ >>>> BEGIN CENTRM CALCULATION >>>>
+
+
+                         ***** Program CENTRM: Continuous ENergy TRansport Module
+
+     CENTRM MATERIALS
+
+        nuclides on                                                   Mixing Table
+        multi-grp lib.  composition                mixture   component   atom density      small
+     1      8016            1                         1         8016     4.63368E-02         1                
+     2      8017            1                         1         8017     1.76509E-05         1                
+     3      8018            1                         1         8018     9.52217E-05         1                
+     4     64152            1                         1        64152     2.46200E-06         1                
+     5     64154            1                         1        64154     2.68358E-05         1                
+     6     64155            1                         1        64155     1.82188E-04         1                
+     7     64156            1                         1        64156     2.51986E-04         1                
+     8     64157            1                         1        64157     1.92652E-04         1                
+     9     64158            1                         1        64158     3.05781E-04         1                
+    10     64160            1                         1        64160     2.69097E-04         1                
+    11     92234            1                         1        92234     7.70796E-06         1                
+    12     92235            1                         1        92235     1.01582E-03         1                
+    13     92238            1                         1        92238     2.12780E-02         1                
+ *** WARNING! Use of bound thermal scattering kernels is requested, but no kernel file is provided.
+               Free-gas thermal kernels will be used for all materials
+     ft81f001            =   pointwise XS library from Crawdad
+
+      MULTIGROUP STRUCTURE
+
+     igm      =      252      number of energy groups
+     mmt      =      252      number of neutron groups
+     mcr      =        0      number of gamma groups
+     iftg     =      156      first thermal group number
+
+
+     GENERAL PROBLEM DATA
+
+     ige      =        0     problem geometry
+                               0/1/2/3 = inf. hom. medium/plane/cylinder/sphere
+     izm      =        1     number of zones
+     im       =        1     number of spatial intervals
+     ibl      =        1     left boundary condition:
+                               0/1/2/3 = vacuum/reflected/periodic/albedo
+     ibr      =        1     right boundary condition:
+                               0/1/2/3 = vacuum/reflected/periodic/albedo
+     mxx      =        1     number of mixtures
+     ms       =       13     mixing table length
+     isn      =        2     SN quadrature order (not used for npxs=6)
+     isct     =        0     order of elastic scattering
+     isrc     =        1     type of source spectrum:
+                               0/1/2 = multigroup input spectrum/fission spectrum/both (1)
+     iim      =       10     inner iterations maximum (10)
+     iup      =        3     upscatter outer iterations in thermal range (3)
+     nfst     =        3     multigroup calculation option in upper energy range [option nfst=5 is deprecated]:
+                               0/1/2/3/4/6 = sn/diffusion/homogeneous/zonewise homogeneous/BN/2D MoC cell (0)
+     nthr     =        3     multigroup calculation option in lower energy range [option nthr=5 is deprecated]:
+                               0/1/2/3/4/6 = sn/diffusion/homogeneous/zonewise homogeneous/BN/2D MoC cell (0)
+     npxs     =        4     pointwise calculation option:
+                               <=0/1/2/3/4/5/6 = no pointwise: do multigroup as in nfst/sn/coll. prob./
+                                 homogeneous/zonewise homogeneous/zonewise two-region/2D MoC cell (1)
+     isvar    =        3     multigroup source & cross section linearization option :
+                               0/1/2/3 = none/linearize source/linearize group cross sections/both (3)
+     mocMesh  =        0     meshing options for MoC calculation; npxs=6 only:
+                               0/1/2   = coarse/regular/fine mesh/input by zone (0)
+     mocPol   =        0     number of polar angles for MoC quadrature; npxs=6 only:
+                               2/3/4 = allowable values        (3)
+     mocAzi   =        0     number of azimuthal angles for MoC quadrature; npxs=6 only:
+                               1 -> 16 = allowable values      (8)
+     kern     =        0     thermal neutron scattering treatment:
+                               0/1 = all free-gas thermal kernels/use bound S(alpha, beta) data if available (0)
+     iscti    =        0     inelastic scattering order (0)
+     nmf6     =       -1     inelastic scattering option:
+                               -1/0/1 = no inelastic/discrete level only/discrete+continuum (0)
+
+
+     EDITTING AND OTHER OPTIONS
+
+     iprt     =       -3     -3/-2/-1/n = mixture cross sections print options: 
+                               none/write P.W. energy & macro x-sections to output file/print 1-D M.G. x-sections
+                               /print nth p (p0,p1..) M.G. x-section matrix (-3)
+     id1      =       -1     -1/0/1/2 = flux print options:
+                                none/print M.G flux/also print M.G moments/save PW zone flux in ascii file
+     ipbt     =        0     0/1 = none/group summary table print (0)
+     iqm      =        0     input multigrp volumetric sources (0/n=no/yes)
+     ipm      =        0     input multigrp boundary angular sources (0/n=no/yes)
+     ipn      =        2     0/1/2 diff. coef. param (2)
+     idfm     =        1     0/1 = none/density factors (0)
+     ixprt    =        0     0/1 = minimum print/regular print (0)
+     mlim     =        0     0/m = no effect/restrict nuclides with mass >= m to have PW scatter order <= nlim  (100)
+     nlim     =        0     restrictive scatter order (1)
+
+
+
+     FLOATING POINT VALUES
+
+     eps      =     0.10000E-02    upscatter integral convergence (0.001)
+     ptc      =     0.10000E-03    inner iteration convergence (0.001)
+     xnf      =     0.10000E+01    source normalization factor (1.0)
+     b2       =     0.00000E+00    buckling value ( cm**(-2) )
+     demin    =     0.10000E-02    lowest energy of pointwise calculation in (eV)
+     demax    =     0.20000E+05    highest energy of pointwise calculation in (eV)
+     tole     =     0.10000E-02    tolerance used in thinning the pointwise cross sections (0.001)
+     mocRay   =     0.00000E+00    distance between MoC rays; npxs=6 only. (0.02)
+     flet     =     0.10000E+00    fractional lethargy used in construction of flux energy mesh (0.1)
+     alump    =     0.20000E+00    mass-lumping criterion (0)
+
+
+ .........................................................................................................
+
+  Input DEMIN and DEMAX values may be modified to lie on multigroup boundaries.
+    Min and Max energies (eV) defining range for pointwise flux calculation  =     1.000E-03    2.000E+04
+ .........................................................................................................
+
+
+                              *******  Nuclide Lumping Summary **********
+
+                                Lumping tolerance on mass    =   0.2000
+                                Original number of Materials =   13
+                                Number of lumped materials   =    3
+
+                              ********************************************
+
+
+
+
+          kern is input as 0 or no file supplied for bound thermal kernel data.
+          => All PW thermal scatter kernels are treated as Free Gas
+
+
+
+  ***Thermal Outer Iteration Limit Reached!
+
+  ***Worst Inner Convergence For Epithermal Groups Was 0.00000E+00
+  ***Worst Inner Convergence For Thermal Flux Was      0.00000E+00
+  ***Outer Convergence of Thermal Flux (MG/PW) Was     7.65785E+00 4.98215E+00
+  ***Max. Scale Factor For Thermal Band Was            1.00000E+01
+  ***Outer Integral Convergence of Thermal Balance Was-9.21052E-01
+
+
+
+   elapsed time .01 min.
+   =time at end of centrm_Execute.
+  
+ <<<< CENTRM CALCULATION COMPLETED <<<<
+
+ >>>> BEGIN PMC CALCULATION >>>>
+
+
+                         ***** Program PMC: Process Multigroup Cross sections
+
+     PMC LOGICAL UNITS 
+
+     libx  = 81    Input Pointwise XS Library
+     libsc = 18    Scratch Unit 1
+     libsx = 19    Scratch Unit 2
+     libsm = 17    scratch unit (master library)
+
+
+
+     PMC INPUT PARAMETERS
+
+     mrange =  2   Option for choosing energy range     0   Averaging over pointwise xs limits
+                                                        1   Averaging over resolved resonance range
+                                                        2   Averaging over pointwise flux limits
+
+     n2d    = -1   Option for 2-D scat. calculation    -2   Apply elastic removal correction to P0 matrix and 
+                                                             apply consistent PN correction to Legendre moments
+                                                       -1   Apply elastic removal correction to P0 matrix
+                                                        0   Normalize 2-D elastic data to shielded 1-D value
+                                                        1   Recompute 2-D elastic using flux and s-wave kernel
+                                                        2   Apply consistent PN correction to Legendre moments
+
+     nprt   = -1   Option for PMC print output         -1   Minimum data printed 
+                                                        0   Standard printed output
+                                                        1   Print 1-D XSs
+                                                        2   Print both 1-D and 2-D XSs 
+
+     nwt    =  0   Option for XS averaging              0   Zone average
+                                                        1   Cell average
+
+     mtt    =  1   Option for total XS calculation      0   Average independently
+                                                        1   As sum of partial XS 
+
+    pmc_omit=  0   Option for Processing PW Materials   0   Process all Pointwise Materials Used in CENTRM
+                                                        1   Process only nuclides in fissionable (fuel) regions
+                                                        N   Process all materials except N nuclides in 2$$
+
+     ixtr(2)=  0   Option for calculation sequence      0   CSAS Standard Sequence
+                                                        1   Independant (stand-alone) Execution
+                                                        2   CSAS Doubly-Heterogeneous Cell Sequence
+
+     ixtr(3)=  5   Legendre expansion order            -1   Process all Legendre expansion moments found on AMPX LIB.
+                                                  =0,...N   Process new values only up through PN moments 
+
+     n1d    =  0   Option for 1-D cross-sections        0   Weight using using scalar flux
+                                                        1   Weight using using abs value of current (1st moment)
+
+
+     XS_dilute =  1.0E+10   min background XS considered infinitely dilute
+
+   elapsed time .00 min.
+
+   elapsed time .00 min.
+
+ <<<< PMC CALCULATION COMPLETED <<<<
+
+XSProc execution of module CentrmPmc completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+XSProc starting module Dancoff.
+
+ Dancoff Module Problem Description
+ ige--geometry type(0/1/2/3--inf med/slab/cyl/sphere)                         0
+ izm--number of zones or material regions                                     1
+ igo--celltype                                                                1
+ ibr--right boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+ ibl--left  boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+XSProc execution of module Dancoff completed.
+XSProc starting module Bonami.
+XSProc execution of module Bonami completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+XSProc starting module Dancoff.
+
+ Dancoff Module Problem Description
+ ige--geometry type(0/1/2/3--inf med/slab/cyl/sphere)                         0
+ izm--number of zones or material regions                                     1
+ igo--celltype                                                                1
+ ibr--right boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+ ibl--left  boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+XSProc execution of module Dancoff completed.
+XSProc starting module Bonami.
+XSProc execution of module Bonami completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+XSProc starting module Dancoff.
+
+ Dancoff Module Problem Description
+ ige--geometry type(0/1/2/3--inf med/slab/cyl/sphere)                         0
+ izm--number of zones or material regions                                     1
+ igo--celltype                                                                1
+ ibr--right boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+ ibl--left  boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+XSProc execution of module Dancoff completed.
+XSProc starting module Bonami.
+XSProc execution of module Bonami completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+XSProc starting module Dancoff.
+
+ Dancoff Module Problem Description
+ ige--geometry type(0/1/2/3--inf med/slab/cyl/sphere)                         0
+ izm--number of zones or material regions                                     1
+ igo--celltype                                                                1
+ ibr--right boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+ ibl--left  boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+XSProc execution of module Dancoff completed.
+XSProc starting module Bonami.
+XSProc execution of module Bonami completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+XSProc starting module Dancoff.
+
+ Dancoff Module Problem Description
+ ige--geometry type(0/1/2/3--inf med/slab/cyl/sphere)                         0
+ izm--number of zones or material regions                                     1
+ igo--celltype                                                                1
+ ibr--right boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+ ibl--left  boundary condition (0/1/2/3--vacuum/reflected/periodic/white)     0
+XSProc execution of module Dancoff completed.
+XSProc starting module Bonami.
+XSProc execution of module Bonami completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+XSProc starting module CentrmPmc.
+
+ >>>> BEGIN CENTRM CALCULATION >>>>
+
+
+                         ***** Program CENTRM: Continuous ENergy TRansport Module
+
+     CENTRM MATERIALS
+
+        nuclides on                                                   Mixing Table
+        multi-grp lib.  composition                mixture   component   atom density      small
+     1      3006            6                         1         3006     1.15480E-03         1                
+     2      3007            6                         1         3007     1.40600E-02         1                
+     3      4009            6                         1         4009     1.52148E-02         1                
+     4      9019            6                         1         9019     4.87338E-02         1                
+     5     92234            6                         1        92234     1.14407E-06         1                
+     6     92235            6                         1        92235     1.52152E-04         1                
+     7     92238            6                         1        92238     6.19054E-04         1                
+ *** WARNING! Use of bound thermal scattering kernels is requested, but no kernel file is provided.
+               Free-gas thermal kernels will be used for all materials
+     ft81f001            =   pointwise XS library from Crawdad
+
+      MULTIGROUP STRUCTURE
+
+     igm      =      252      number of energy groups
+     mmt      =      252      number of neutron groups
+     mcr      =        0      number of gamma groups
+     iftg     =      156      first thermal group number
+
+
+     GENERAL PROBLEM DATA
+
+     ige      =        0     problem geometry
+                               0/1/2/3 = inf. hom. medium/plane/cylinder/sphere
+     izm      =        1     number of zones
+     im       =        1     number of spatial intervals
+     ibl      =        1     left boundary condition:
+                               0/1/2/3 = vacuum/reflected/periodic/albedo
+     ibr      =        1     right boundary condition:
+                               0/1/2/3 = vacuum/reflected/periodic/albedo
+     mxx      =        1     number of mixtures
+     ms       =        7     mixing table length
+     isn      =        2     SN quadrature order (not used for npxs=6)
+     isct     =        0     order of elastic scattering
+     isrc     =        1     type of source spectrum:
+                               0/1/2 = multigroup input spectrum/fission spectrum/both (1)
+     iim      =       10     inner iterations maximum (10)
+     iup      =        3     upscatter outer iterations in thermal range (3)
+     nfst     =        3     multigroup calculation option in upper energy range [option nfst=5 is deprecated]:
+                               0/1/2/3/4/6 = sn/diffusion/homogeneous/zonewise homogeneous/BN/2D MoC cell (0)
+     nthr     =        3     multigroup calculation option in lower energy range [option nthr=5 is deprecated]:
+                               0/1/2/3/4/6 = sn/diffusion/homogeneous/zonewise homogeneous/BN/2D MoC cell (0)
+     npxs     =        4     pointwise calculation option:
+                               <=0/1/2/3/4/5/6 = no pointwise: do multigroup as in nfst/sn/coll. prob./
+                                 homogeneous/zonewise homogeneous/zonewise two-region/2D MoC cell (1)
+     isvar    =        3     multigroup source & cross section linearization option :
+                               0/1/2/3 = none/linearize source/linearize group cross sections/both (3)
+     mocMesh  =        0     meshing options for MoC calculation; npxs=6 only:
+                               0/1/2   = coarse/regular/fine mesh/input by zone (0)
+     mocPol   =        0     number of polar angles for MoC quadrature; npxs=6 only:
+                               2/3/4 = allowable values        (3)
+     mocAzi   =        0     number of azimuthal angles for MoC quadrature; npxs=6 only:
+                               1 -> 16 = allowable values      (8)
+     kern     =        0     thermal neutron scattering treatment:
+                               0/1 = all free-gas thermal kernels/use bound S(alpha, beta) data if available (0)
+     iscti    =        0     inelastic scattering order (0)
+     nmf6     =       -1     inelastic scattering option:
+                               -1/0/1 = no inelastic/discrete level only/discrete+continuum (0)
+
+
+     EDITTING AND OTHER OPTIONS
+
+     iprt     =       -3     -3/-2/-1/n = mixture cross sections print options: 
+                               none/write P.W. energy & macro x-sections to output file/print 1-D M.G. x-sections
+                               /print nth p (p0,p1..) M.G. x-section matrix (-3)
+     id1      =       -1     -1/0/1/2 = flux print options:
+                                none/print M.G flux/also print M.G moments/save PW zone flux in ascii file
+     ipbt     =        0     0/1 = none/group summary table print (0)
+     iqm      =        0     input multigrp volumetric sources (0/n=no/yes)
+     ipm      =        0     input multigrp boundary angular sources (0/n=no/yes)
+     ipn      =        2     0/1/2 diff. coef. param (2)
+     idfm     =        1     0/1 = none/density factors (0)
+     ixprt    =        0     0/1 = minimum print/regular print (0)
+     mlim     =        0     0/m = no effect/restrict nuclides with mass >= m to have PW scatter order <= nlim  (100)
+     nlim     =        0     restrictive scatter order (1)
+
+
+
+     FLOATING POINT VALUES
+
+     eps      =     0.10000E-02    upscatter integral convergence (0.001)
+     ptc      =     0.10000E-03    inner iteration convergence (0.001)
+     xnf      =     0.10000E+01    source normalization factor (1.0)
+     b2       =     0.00000E+00    buckling value ( cm**(-2) )
+     demin    =     0.10000E-02    lowest energy of pointwise calculation in (eV)
+     demax    =     0.20000E+05    highest energy of pointwise calculation in (eV)
+     tole     =     0.10000E-02    tolerance used in thinning the pointwise cross sections (0.001)
+     mocRay   =     0.00000E+00    distance between MoC rays; npxs=6 only. (0.02)
+     flet     =     0.10000E+00    fractional lethargy used in construction of flux energy mesh (0.1)
+     alump    =     0.20000E+00    mass-lumping criterion (0)
+
+
+ .........................................................................................................
+
+  Input DEMIN and DEMAX values may be modified to lie on multigroup boundaries.
+    Min and Max energies (eV) defining range for pointwise flux calculation  =     1.000E-03    2.000E+04
+ .........................................................................................................
+
+
+                              *******  Nuclide Lumping Summary **********
+
+                                Lumping tolerance on mass    =   0.2000
+                                Original number of Materials =    7
+                                Number of lumped materials   =    4
+
+                              ********************************************
+
+
+
+
+          kern is input as 0 or no file supplied for bound thermal kernel data.
+          => All PW thermal scatter kernels are treated as Free Gas
+
+
+
+  ***Thermal Outer Iteration Limit Reached!
+
+  ***Worst Inner Convergence For Epithermal Groups Was 0.00000E+00
+  ***Worst Inner Convergence For Thermal Flux Was      0.00000E+00
+  ***Outer Convergence of Thermal Flux (MG/PW) Was     6.55803E-02 6.72164E-02
+  ***Max. Scale Factor For Thermal Band Was            1.00090E+00
+  ***Outer Integral Convergence of Thermal Balance Was-6.10740E-08
+
+
+
+   elapsed time .01 min.
+   =time at end of centrm_Execute.
+  
+ <<<< CENTRM CALCULATION COMPLETED <<<<
+
+ >>>> BEGIN PMC CALCULATION >>>>
+
+
+                         ***** Program PMC: Process Multigroup Cross sections
+
+     PMC LOGICAL UNITS 
+
+     libx  = 81    Input Pointwise XS Library
+     libsc = 18    Scratch Unit 1
+     libsx = 19    Scratch Unit 2
+     libsm = 17    scratch unit (master library)
+
+
+
+     PMC INPUT PARAMETERS
+
+     mrange =  2   Option for choosing energy range     0   Averaging over pointwise xs limits
+                                                        1   Averaging over resolved resonance range
+                                                        2   Averaging over pointwise flux limits
+
+     n2d    = -1   Option for 2-D scat. calculation    -2   Apply elastic removal correction to P0 matrix and 
+                                                             apply consistent PN correction to Legendre moments
+                                                       -1   Apply elastic removal correction to P0 matrix
+                                                        0   Normalize 2-D elastic data to shielded 1-D value
+                                                        1   Recompute 2-D elastic using flux and s-wave kernel
+                                                        2   Apply consistent PN correction to Legendre moments
+
+     nprt   = -1   Option for PMC print output         -1   Minimum data printed 
+                                                        0   Standard printed output
+                                                        1   Print 1-D XSs
+                                                        2   Print both 1-D and 2-D XSs 
+
+     nwt    =  0   Option for XS averaging              0   Zone average
+                                                        1   Cell average
+
+     mtt    =  1   Option for total XS calculation      0   Average independently
+                                                        1   As sum of partial XS 
+
+    pmc_omit=  0   Option for Processing PW Materials   0   Process all Pointwise Materials Used in CENTRM
+                                                        1   Process only nuclides in fissionable (fuel) regions
+                                                        N   Process all materials except N nuclides in 2$$
+
+     ixtr(2)=  0   Option for calculation sequence      0   CSAS Standard Sequence
+                                                        1   Independant (stand-alone) Execution
+                                                        2   CSAS Doubly-Heterogeneous Cell Sequence
+
+     ixtr(3)=  5   Legendre expansion order            -1   Process all Legendre expansion moments found on AMPX LIB.
+                                                  =0,...N   Process new values only up through PN moments 
+
+     n1d    =  0   Option for 1-D cross-sections        0   Weight using using scalar flux
+                                                        1   Weight using using abs value of current (1st moment)
+
+
+     XS_dilute =  1.0E+10   min background XS considered infinitely dilute
+
+   elapsed time .00 min.
+
+   elapsed time .00 min.
+
+ <<<< PMC CALCULATION COMPLETED <<<<
+
+XSProc execution of module CentrmPmc completed.
+XSProc starting module MixMacros.
+XSProc execution of module MixMacros completed.
+module xsproc is finished. completion code 0.
+
+    SCALE is finished on Mon Jan 23 00:38:49 2023.
+-------------------------- Summary --------------------------
+t-xsec finished. used 14.6853 seconds.
+SCALE driver required a maximum of 1245 MiB of RAM.
+------------------------ End Summary ------------------------
+
